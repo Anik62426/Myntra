@@ -45,21 +45,16 @@ function displayItemsOnHomePage() {
           <span class="original-price">Rs ${item.original_price}</span>
           <span class="discount">(${item.discount_percentage}% OFF)</span>
       </div>
-      <button class="btn-add-bag" onclick="addToBag(${item.id}); showNotification();">Add to Bag</button>
+      <button class="btn-add-bag" onclick="addToBag(${item.id})";>Add to Bag</button>
     </div>`
   });
-  function showNotification() {
-    //if(document.visibilityState === "visible") {
-      //  return;
-    //   }
-    let title = "JavaScript Jeep";
-    let icon = 'images/myntra_logo.webp';
-    let body = "Message to be displayed";
-    var notification = new Notification('Title', { body, icon });
-    notification.onclick = () => {
-         notification.close();
-         window.parent.focus();
-    }
- }
+  //function showNotification() {
+   
+    // let title = "JavaScript Jeep";
+    // let body = "Message to be displayed";
+    // var notification = new Notification('Title', {
+    //   body: 'hey i'
+    // } );
+ //}
   itemsContainerElement.innerHTML = innerHtml;
 }
