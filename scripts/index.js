@@ -24,6 +24,14 @@ function displayBagIcon() {
     bagItemCountElement.style.visibility = 'hidden';
   }
 }
+function showPopup() {
+        
+  var popup = document.getElementById("popup");
+  popup.style.display = "flex";
+  setTimeout(function () {
+       popup.style.display = "none";
+   }, 3000);
+}
 
 function displayItemsOnHomePage() {
   let itemsContainerElement = document.querySelector('.items-container');
@@ -45,16 +53,15 @@ function displayItemsOnHomePage() {
           <span class="original-price">Rs ${item.original_price}</span>
           <span class="discount">(${item.discount_percentage}% OFF)</span>
       </div>
-      <button class="btn-add-bag" onclick="addToBag(${item.id})";>Add to Bag</button>
+      <button class="btn-add-bag" onclick="addToBag(${item.id}), showPopup(); ">Add to Bag</button>
+      <div id="popup">
+            <img id="img" src="${item.image}">
+            <p id="txt"> Added to cart</p>
+       </div>
+       
     </div>`
   });
-  //function showNotification() {
-   
-    // let title = "JavaScript Jeep";
-    // let body = "Message to be displayed";
-    // var notification = new Notification('Title', {
-    //   body: 'hey i'
-    // } );
- //}
+  
+  
   itemsContainerElement.innerHTML = innerHtml;
 }

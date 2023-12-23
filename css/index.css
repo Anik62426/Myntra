@@ -219,6 +219,30 @@ header {
     border-radius: 10px;
     cursor: pointer;
 }
+#popup{
+    height: 52.67px;
+    width: 160px;
+    background-color:rgba(96,112,128);
+    align-items: center;
+    display: none;
+    justify-content: space-around;
+    border-radius: 4px;
+    position: fixed;
+    top: 100px;
+    right: 100px;
+   
+  }
+  #txt{
+    font-size: 1rem;
+    font-weight: 900;
+    margin-right: 10px;
+    color: #FFFF;
+  }
+  #img{
+    margin-left: 2px ;
+    height: 40px;
+    width: 30px;
+  }
 .bag-item-count {
     background-color: #f16565;
     white-space: nowrap;
