@@ -36,7 +36,6 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     padding: 28px 0;
-    border-bottom: 5px solid #ffffff;
 }
 .nav_bar a:hover {
     border-bottom: 4px solid #f54e77;
@@ -219,7 +218,7 @@ header {
     border-radius: 10px;
     cursor: pointer;
 }
-#popup{
+.popup{
     height: 52.67px;
     width: 160px;
     background-color:rgba(96,112,128);

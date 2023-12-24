@@ -24,10 +24,12 @@ function displayBagIcon() {
     bagItemCountElement.style.visibility = 'hidden';
   }
 }
-function showPopup() {
+function showPopup(id) {
         
-  var popup = document.getElementById("popup");
+  var popup = document?.getElementById("00"+id);
+ 
   popup.style.display = "flex";
+
   setTimeout(function () {
        popup.style.display = "none";
    }, 3000);
@@ -53,11 +55,11 @@ function displayItemsOnHomePage() {
           <span class="original-price">Rs ${item.original_price}</span>
           <span class="discount">(${item.discount_percentage}% OFF)</span>
       </div>
-      <button class="btn-add-bag" onclick="addToBag(${item.id}), showPopup(); ">Add to Bag</button>
-      <div id="popup">
-            <img id="img" src="${item.image}">
-            <p id="txt"> Added to cart</p>
-       </div>
+      <button type="button" class="btn-add-bag" onclick="addToBag(${item.id}) , showPopup(${item.id}); ">Add to Bag</button>
+      <div class='popup' id=${item.id}>
+          <img class="img" width='30' height='30' src="${item.image}" alt="item image">
+           <p class="txt"> Added to cart </p>
+      </div>
        
     </div>`
   });
