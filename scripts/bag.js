@@ -8,6 +8,7 @@ function onLoad() {
   displayBagSummary();
 }
 
+
 function displayBagSummary() {
   let bagSummaryElement = document.querySelector('.bag-summary');
   let totalItem = bagItemObjects.length;
@@ -35,7 +36,7 @@ function displayBagSummary() {
     </div>
     <div class="price-item">
       <span class="price-item-tag">Convenience Fee</span>
-      <span class="price-item-value">₹99</span>
+      <span class="price-item-value">₹0</span>
     </div>
     <hr>
     <div class="price-footer">
