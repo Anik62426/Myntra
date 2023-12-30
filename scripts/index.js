@@ -17,7 +17,7 @@ function addToBag(itemId) {
 function displayBagIcon() {
   let bagItemCountElement = document.querySelector('.bag-item-count');
   if (bagItems.length > 0) {
-    console.log('I am here');
+    
     bagItemCountElement.style.visibility = 'visible';
     bagItemCountElement.innerText = bagItems.length;
   } else {
@@ -26,7 +26,7 @@ function displayBagIcon() {
 }
 function showPopup(id) {
         
-  var popup = document?.getElementById("00"+id);
+  var popup = document.getElementById("00"+id);
  
   popup.style.display = "flex";
 
