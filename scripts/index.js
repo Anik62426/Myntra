@@ -9,10 +9,23 @@ function onLoad() {
 }
 
 function addToBag(itemId) {
+  var popup = document.getElementById(itemId);
   bagItems.push(itemId);
   localStorage.setItem('bagItems', JSON.stringify(bagItems));
   displayBagIcon();
+  popup.style.display = "flex";
+  setTimeout(function () {
+       popup.style.display = "none";
+   }, 3000);   
+      
 }
+
+// function showPopup(id) {       
+//   
+//   console.log(popup);
+//  
+// }
+
 
 function displayBagIcon() {
   let bagItemCountElement = document.querySelector('.bag-item-count');
@@ -24,16 +37,7 @@ function displayBagIcon() {
     bagItemCountElement.style.visibility = 'hidden';
   }
 }
-function showPopup(id) {
-        
-  var popup = document.getElementById("00"+id);
- 
-  popup.style.display = "flex";
 
-  setTimeout(function () {
-       popup.style.display = "none";
-   }, 3000);
-}
 
 function displayItemsOnHomePage() {
   let itemsContainerElement = document.querySelector('.items-container');
@@ -55,7 +59,7 @@ function displayItemsOnHomePage() {
           <span class="original-price">Rs ${item.original_price}</span>
           <span class="discount">(${item.discount_percentage}% OFF)</span>
       </div>
-      <button type="button" class="btn-add-bag" onclick="addToBag(${item.id}) , showPopup(${item.id}); ">Add to Bag</button>
+      <button type="button" class="btn-add-bag" onclick="addToBag(${item.id}); ">Add to Bag</button>
       <div class='popup' id=${item.id}>
           <img class="img" width='30' height='30' src="${item.image}" alt="item image">
            <p class="txt"> Added to cart </p>
